@@ -1,6 +1,6 @@
 # yocto-demo
 
-# how to
+# How to build
 ```sh
 git clone --recurse-submodules git@github.com:buldo/yocto-demo.git
 source poky/oe-init-build-env .
