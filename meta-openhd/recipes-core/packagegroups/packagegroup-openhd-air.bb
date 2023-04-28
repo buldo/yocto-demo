@@ -17,4 +17,5 @@ RDEPENDS:${PN} = "\
     rpi-gpio \
     wireless-regdb-static \
     bluez5 \
+    openhd-app \
 "
