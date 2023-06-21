@@ -5,6 +5,10 @@ SECTION = "console/utils"
 
 # TODO: Change license
 LICENSE="CLOSED"
+inherit systemd
+
+SYSTEMD_AUTO_ENABLE = "enable"
+SYSTEMD_SERVICE_${PN} = "openhd.service"
 
 SRC_URI = "\
     gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.3-evo \
@@ -39,4 +43,6 @@ do_compile[network] = "1"
 do_install:append() {
     # Requires python3-core which not all systems may have
     # rm ${D}/${bindir}/camera-bug-report
+    install -d ${D}/${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/git/systemd/openhd.service ${D}/${systemd_unitdir}/system
 }
