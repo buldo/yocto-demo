@@ -13,7 +13,7 @@ SYSTEMD_SERVICE_${PN} = "openhd.service"
 SRC_URI = "\
     gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.3-evo \
 "
-SRCREV = "bc9ca106de846ac43f85d6dae6f40111da48aff6"
+SRCREV = "f98e09ebb344a84cc1a704dbe42777fb723e87e5"
 
 S = "${WORKDIR}/git/OpenHD"
 
