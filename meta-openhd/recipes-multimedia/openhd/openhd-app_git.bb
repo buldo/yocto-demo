@@ -8,7 +8,7 @@ LICENSE="CLOSED"
 inherit systemd cmake pkgconfig
 
 SYSTEMD_AUTO_ENABLE = "enable"
-SYSTEMD_SERVICE_${PN} = "openhd.service"
+SYSTEMD_SERVICE:${PN} = "openhd.service"
 
 SRC_URI = "\
     gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.3-evo \
@@ -28,7 +28,7 @@ EXTRA_OECMAKE = "\
     -DFETCHCONTENT_FULLY_DISCONNECTED=OFF \
 "
 
-# FILES_${PN} += "${systemd_unitdir}/system/openhd.service"
+FILES:${PN} += "${systemd_unitdir}/system/openhd.service"
 
 EXTRA_OECMAKE:append:raspberrypi3 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 EXTRA_OECMAKE:append:raspberrypi4 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
