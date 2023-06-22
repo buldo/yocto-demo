@@ -43,6 +43,6 @@ do_compile[network] = "1"
 do_install:append() {
     # Requires python3-core which not all systems may have
     # rm ${D}/${bindir}/camera-bug-report
-    install -d ${D}/${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/git/systemd/openhd.service ${D}/${systemd_unitdir}/system
+    install -d ${D}${systemd_system_unitdir}
+    install -m 0644 ${S}/../systemd/openhd.service ${D}${systemd_system_unitdir}
 }
