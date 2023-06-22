@@ -5,7 +5,7 @@ SECTION = "console/utils"
 
 # TODO: Change license
 LICENSE="CLOSED"
-inherit systemd
+inherit systemd cmake pkgconfig
 
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE_${PN} = "openhd.service"
@@ -21,14 +21,14 @@ COMPATIBLE_MACHINE = "^rpi$"
 
 DEPENDS = "boost gstreamer1.0-omx libsodium libv4l libpcap"
 
-inherit cmake pkgconfig
-
 EXTRA_OECMAKE = "\
     -DCMAKE_BUILD_TYPE=Release \
     -DBoost_INCLUDE_DIR=${STAGING_INCDIR} \
     -DCMAKE_LIBRARY_PATH=${STAGING_LIBDIR} \
     -DFETCHCONTENT_FULLY_DISCONNECTED=OFF \
 "
+
+FILES_${PN} += "${WORKDIR}/git/systemd/openhd.service"
 
 EXTRA_OECMAKE:append:raspberrypi3 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 EXTRA_OECMAKE:append:raspberrypi4 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
