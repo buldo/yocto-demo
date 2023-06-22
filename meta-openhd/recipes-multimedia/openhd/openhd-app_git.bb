@@ -28,7 +28,7 @@ EXTRA_OECMAKE = "\
     -DFETCHCONTENT_FULLY_DISCONNECTED=OFF \
 "
 
-FILES_${PN} += "${systemd_unitdir}/system/openhd.service"
+# FILES_${PN} += "${systemd_unitdir}/system/openhd.service"
 
 EXTRA_OECMAKE:append:raspberrypi3 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 EXTRA_OECMAKE:append:raspberrypi4 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
