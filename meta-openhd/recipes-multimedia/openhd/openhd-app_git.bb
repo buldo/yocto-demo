@@ -12,6 +12,7 @@ SYSTEMD_SERVICE:${PN} = "openhd.service"
 
 SRC_URI = "\
     gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.3-evo \
+    file://openhd.service \
 "
 SRCREV = "c904d30c7730b41cfe7c0b062b1ddfc31bbfde55"
 
@@ -41,8 +42,6 @@ do_configure[network] =  "1"
 do_compile[network] = "1"
 
 do_install:append() {
-    # Requires python3-core which not all systems may have
-    # rm ${D}/${bindir}/camera-bug-report
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${S}/../systemd/openhd.service ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/openhd.service ${D}${systemd_system_unitdir}
 }
