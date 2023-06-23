@@ -9,5 +9,5 @@ LICENSE="CLOSED"
 do_install:append() {
     install -d ${D}/boot/openhd/
     touch ${D}/boot/openhd/air.txt
-    install -m 0644 ${D}/boot/openhd/air.txt
+    chmod 0644 ${D}/boot/openhd/air.txt
 }
