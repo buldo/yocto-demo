@@ -5,4 +5,3 @@ COMPATIBLE_MACHINE = "^rpi$"
 
 IMAGE_INSTALL:append = " packagegroup-openhd-air rtl8812au systemd"
 EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
-INIT_MANAGER = "systemd"
