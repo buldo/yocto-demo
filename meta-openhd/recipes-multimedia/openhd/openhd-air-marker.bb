@@ -6,7 +6,7 @@ SECTION = "console/utils"
 # TODO: Change license
 LICENSE="CLOSED"
 
-FILES:${PN} += "${D}/boot/openhd/air.txt"
+FILES:${PN} += "/boot/openhd"
 
 do_install:append() {
     install -d ${D}/boot/openhd/
