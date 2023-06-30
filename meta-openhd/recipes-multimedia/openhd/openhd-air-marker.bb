@@ -11,12 +11,12 @@ inherit deploy nopackages
 FILES:${PN} += "/boot/openhd"
 
 do_deploy() {
-    install -d ${DEPLOYDIR}/boot/openhd/
-    touch ${DEPLOYDIR}/boot/openhd/air.txt
-    chmod 0644 ${DEPLOYDIR}/boot/openhd/air.txt
+    install -d ${IMAGE_ROOTFS}/boot/openhd/
+    touch ${IMAGE_ROOTFS}/boot/openhd/air.txt
+    chmod 0644 ${IMAGE_ROOTFS}/boot/openhd/air.txt
 }
 
 addtask deploy before do_build after do_install
-do_deploy[dirs] += "${DEPLOYDIR}/boot"
+do_deploy[dirs] += "${IMAGE_ROOTFS}/boot"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
