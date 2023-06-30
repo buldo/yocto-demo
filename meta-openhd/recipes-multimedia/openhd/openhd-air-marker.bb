@@ -6,17 +6,16 @@ SECTION = "console/utils"
 # TODO: Change license
 LICENSE="CLOSED"
 
-inherit deploy nopackages
+SRC_URI = "\
+    file://air.txt \
+"
 
-FILES:${PN} += "/boot/openhd"
+FILES:${PN} = ""
+ALLOW_EMPTY:${PN} = "1"
 
 do_deploy() {
     install -d ${IMAGE_ROOTFS}/boot/openhd/
-    touch ${IMAGE_ROOTFS}/boot/openhd/air.txt
-    chmod 0644 ${IMAGE_ROOTFS}/boot/openhd/air.txt
+    install -m 07755 ${WORKDIR}/air.txt ${IMAGE_ROOTFS}/boot/openhd/air.txt
 }
 
-addtask deploy before do_build after do_install
-do_deploy[dirs] += "${IMAGE_ROOTFS}/boot"
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
+addtask deploy after do_install

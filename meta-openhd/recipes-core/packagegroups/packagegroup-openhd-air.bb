@@ -18,4 +18,5 @@ RDEPENDS:${PN} = "\
     wireless-regdb-static \
     bluez5 \
     openhd-app \
+    openhd-air-marker \
 "
