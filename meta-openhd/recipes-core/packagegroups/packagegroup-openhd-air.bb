@@ -19,4 +19,5 @@ RDEPENDS:${PN} = "\
     bluez5 \
     openhd-app \
     openhd-air-marker \
+    userland \
 "
