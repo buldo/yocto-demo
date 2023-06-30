@@ -7,15 +7,14 @@ SECTION = "console/utils"
 LICENSE="CLOSED"
 
 SRC_URI = "\
-    file://air.txt \
+    file://air.txt;unpack=0 \
 "
 
-FILES:${PN} = ""
-ALLOW_EMPTY:${PN} = "1"
+FILES:${PN} += "/boot/openhd/air.txt"
 
-do_deploy() {
-    install -d ${IMAGE_ROOTFS}/boot/openhd/
-    install -m 07755 ${WORKDIR}/air.txt ${IMAGE_ROOTFS}/boot/openhd/air.txt
+do_install() {
+    install -m 0755 -d ${D}/boot/openhd
+    install -m 0755 ${WORKDIR}/air.txt ${D}/boot/openhd/air.txt
 }
 
 addtask deploy after do_install
