@@ -20,7 +20,7 @@ S = "${WORKDIR}/git/OpenHD"
 
 COMPATIBLE_MACHINE = "^rpi$"
 
-DEPENDS = "boost gstreamer1.0-omx libsodium libv4l libpcap libcamera libcamera-dev" 
+DEPENDS = "boost gstreamer1.0-omx libsodium libv4l libpcap libcamera" 
 
 EXTRA_OECMAKE = "\
     -DCMAKE_BUILD_TYPE=Release \
