@@ -27,4 +27,6 @@ RDEPENDS:${PN} = "\
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-ugly \
+    libgstreamer1.0 \
+    libgstreamer-plugins-base \
 "
