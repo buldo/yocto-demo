@@ -21,4 +21,5 @@ RDEPENDS:${PN} = "\
     openhd-air-marker \
     userland \
     rpi-libcamera-apps \
+    libcamera \
 "
