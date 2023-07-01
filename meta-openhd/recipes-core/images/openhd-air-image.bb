@@ -9,6 +9,3 @@ EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
 # RPI_SDIMG_EXTRA_DEPENDS += " \
 #     openhd-air-marker:do_deploy \
 # "
-RDEPENDS:${PN} = "\
-    libcamera \
-"
