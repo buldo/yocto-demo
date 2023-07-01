@@ -16,6 +16,7 @@ VIDEO_TOOLS = " \
             gstreamer1.0-meta-base \
             gst-examples \
             gstreamer1.0-rtsp-server \
+            libcamera-gst \
            "
 
 # RPI_SDIMG_EXTRA_DEPENDS += " \
