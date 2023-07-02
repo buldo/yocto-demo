@@ -40,7 +40,6 @@ RDEPENDS:${PN} += "\
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-ugly \
     libcamera \
-    libcamera-gst \
     libpcap \
     libv4l \
 "
