@@ -3,7 +3,15 @@ include recipes-core/images/core-image-base.bb
 inherit systemd
 COMPATIBLE_MACHINE = "^rpi$"
 
-IMAGE_INSTALL:append = " packagegroup-openhd-air rtl8812au systemd userland libcamera ${VIDEO_TOOLS}"
+IMAGE_INSTALL:append = " \
+    packagegroup-openhd-air \
+    rtl8812au \
+    systemd \
+    userland \
+    libcamera \
+    libcamera-gst \
+    ${VIDEO_TOOLS} \
+    "
 EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
 
 VIDEO_TOOLS = " \
@@ -16,7 +24,6 @@ VIDEO_TOOLS = " \
             gstreamer1.0-meta-base \
             gst-examples \
             gstreamer1.0-rtsp-server \
-            libcamera-gst \
            "
 
 # RPI_SDIMG_EXTRA_DEPENDS += " \
