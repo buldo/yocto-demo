@@ -27,7 +27,6 @@ DEPENDS = "\
     libpcap \
     libcamera \ 
     gstreamer1.0 \
-    gstreamer1.0-omx \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
@@ -36,12 +35,14 @@ DEPENDS = "\
 
 RDEPENDS:${PN} += "\
     gstreamer1.0 \
+    gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-ugly \
     libcamera \
     libcamera-gst \
+    libpcap \
+    libv4l \
 "
 
 EXTRA_OECMAKE = "\
