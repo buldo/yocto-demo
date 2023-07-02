@@ -13,10 +13,19 @@ PE = "1"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "python3-pyyaml-native python3-jinja2-native python3-ply-native python3-jinja2-native udev gnutls chrpath-native libevent libyaml gstreamer1.0 gstreamer1.0-plugins-base"
-# DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'qt', 'qtbase qtbase-native', '', d)}"
-
-PACKAGES =+ "${PN}-gst"
+DEPENDS = "\
+    python3-pyyaml-native \
+    python3-jinja2-native \
+    python3-ply-native \
+    python3-jinja2-native \
+    udev \
+    gnutls \
+    chrpath-native \
+    libevent \
+    libyaml \
+    gstreamer1.0 \
+    gstreamer1.0-plugins-base\
+    "
 
 PACKAGECONFIG ??= ""
 PACKAGECONFIG[gst] = "-Dgstreamer=enabled,-Dgstreamer=disabled,gstreamer1.0 gstreamer1.0-plugins-base"
@@ -32,9 +41,6 @@ EXTRA_OEMESON = " \
     -Ddocumentation=disabled \
     -Dgstreamer=enabled \
 "
-
-# RDEPENDS:${PN} = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland qt', 'qtwayland', '', d)}"
-
 inherit meson pkgconfig python3native
 
 do_configure:prepend() {
@@ -59,8 +65,12 @@ do_recalculate_ipa_signatures_package() {
     ${S}/src/ipa/ipa-sign-install.sh ${B}/src/ipa-priv-key.pem "${modules}"
 }
 
-FILES:${PN} += " ${libdir}/v4l2-compat.so"
-FILES:${PN} += "${libdir}/gstreamer-1.0"
+FILES:${PN} += " \
+    ${libdir}/v4l2-compat.so \
+    ${libdir}/gstreamer-1.0 \
+    /usr/share/libcamera \
+    "
+
 
 # libcamera-v4l2 explicitly sets _FILE_OFFSET_BITS=32 to get access to
 # both 32 and 64 bit file APIs.
