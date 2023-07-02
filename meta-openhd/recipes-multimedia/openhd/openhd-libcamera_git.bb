@@ -30,6 +30,7 @@ EXTRA_OEMESON = " \
     -Dlc-compliance=disabled \
     -Dtest=false \
     -Ddocumentation=disabled \
+    -gstreamer=enabled \
 "
 
 # RDEPENDS:${PN} = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland qt', 'qtwayland', '', d)}"
