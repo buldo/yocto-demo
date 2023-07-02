@@ -42,6 +42,8 @@ RDEPENDS:${PN} += "\
     openhd-libcamera \
     libpcap \
     libv4l \
+    boost \
+    libsodium \
 "
 
 EXTRA_OECMAKE = "\
