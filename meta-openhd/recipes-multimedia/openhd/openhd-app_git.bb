@@ -41,7 +41,6 @@ RDEPENDS:${PN} += "\
     gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-ugly \
     libcamera \
-    libcamera-dev \
     libcamera-gst \
 "
 
