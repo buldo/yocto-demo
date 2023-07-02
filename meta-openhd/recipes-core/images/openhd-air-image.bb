@@ -13,7 +13,7 @@ IMAGE_INSTALL:append = " \
     rtl8812au \
     systemd \
     userland \
-    libcamera \
+    openhd-libcamera \
     gstreamer1.0 \
     gstreamer1.0-plugins-good \ 
     gstreamer1.0-plugins-base \ 
