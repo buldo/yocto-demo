@@ -27,8 +27,8 @@ DEPENDS = "\
     gstreamer1.0-plugins-base\
     "
 
-PACKAGECONFIG ??= ""
-PACKAGECONFIG[gst] = "-Dgstreamer=enabled,-Dgstreamer=disabled,gstreamer1.0 gstreamer1.0-plugins-base"
+#PACKAGECONFIG ??= ""
+#PACKAGECONFIG[gst] = "-Dgstreamer=enabled,-Dgstreamer=disabled,gstreamer1.0 gstreamer1.0-plugins-base"
 
 LIBCAMERA_PIPELINES ??= "auto"
 
