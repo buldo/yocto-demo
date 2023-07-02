@@ -34,6 +34,17 @@ DEPENDS = "\
     gstreamer1.0-plugins-ugly \
     " 
 
+RDEPENDS:${PN} += "\
+    gstreamer1.0 \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-ugly \
+    libcamera \
+    libcamera-dev \
+    libcamera-gst \
+"
+
 EXTRA_OECMAKE = "\
     -DCMAKE_BUILD_TYPE=Release \
     -DBoost_INCLUDE_DIR=${STAGING_INCDIR} \

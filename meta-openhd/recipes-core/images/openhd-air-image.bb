@@ -9,7 +9,6 @@ IMAGE_INSTALL:append = " \
     systemd \
     userland \
     libcamera \
-    libcamera-gst \
     ${VIDEO_TOOLS} \
     "
 EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
