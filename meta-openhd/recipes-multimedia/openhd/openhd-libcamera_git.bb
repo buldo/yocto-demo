@@ -4,7 +4,7 @@ SECTION = "libs"
 LICENSE="CLOSED"
 
 SRC_URI = " \
-        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=master \
+        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=main \
 "
 
 SRCREV = "06bbff9c23d5a85acd65595216c6b75094891f72"
@@ -59,7 +59,7 @@ do_recalculate_ipa_signatures_package() {
 }
 
 FILES:${PN} += " ${libdir}/v4l2-compat.so"
-FILES:${PN}-gst = "${libdir}/gstreamer-1.0"
+FILES:${PN} += "${libdir}/gstreamer-1.0"
 
 # libcamera-v4l2 explicitly sets _FILE_OFFSET_BITS=32 to get access to
 # both 32 and 64 bit file APIs.
