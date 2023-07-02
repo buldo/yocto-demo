@@ -4,10 +4,11 @@ SECTION = "libs"
 LICENSE="CLOSED"
 
 SRC_URI = " \
-        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=main \
+        git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
+        file://0001-file_sink.cpp-Avoid-dangling-reference.patch \
 "
 
-SRCREV = "06bbff9c23d5a85acd65595216c6b75094891f72"
+SRCREV = "6cf637eb253a68edebe59505bea55435fafb00cd"
 
 PE = "1"
 
