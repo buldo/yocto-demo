@@ -69,6 +69,7 @@ FILES:${PN} += " \
     ${libdir}/v4l2-compat.so \
     ${libdir}/gstreamer-1.0 \
     /usr/share/libcamera \
+    /usr/lib/libcamera \
     "
 
 
