@@ -52,18 +52,18 @@ do_install:append() {
     chrpath -d ${D}${libdir}/v4l2-compat.so
 }
 
-addtask do_recalculate_ipa_signatures_package after do_package before do_packagedata
-do_recalculate_ipa_signatures_package() {
-    local modules
-    for module in $(find ${PKGD}/usr/lib/libcamera -name "*.so.sign"); do
-        module="${module%.sign}"
-        if [ -f "${module}" ] ; then
-            modules="${modules} ${module}"
-        fi
-    done
+#addtask do_recalculate_ipa_signatures_package after do_package before do_packagedata
+#do_recalculate_ipa_signatures_package() {
+#    local modules
+#    for module in $(find ${PKGD}/usr/lib/libcamera -name "*.so.sign"); do
+#        module="${module%.sign}"
+#        if [ -f "${module}" ] ; then
+#            modules="${modules} ${module}"
+#        fi
+#    done
 
-    ${S}/src/ipa/ipa-sign-install.sh ${B}/src/ipa-priv-key.pem "${modules}"
-}
+#    ${S}/src/ipa/ipa-sign-install.sh ${B}/src/ipa-priv-key.pem "${modules}"
+#}
 
 FILES:${PN} += " \
     ${libdir}/v4l2-compat.so \
