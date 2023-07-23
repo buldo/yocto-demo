@@ -4,10 +4,10 @@ SECTION = "libs"
 LICENSE="CLOSED"
 
 SRC_URI = " \
-        git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
+        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=master \
 "
 
-SRCREV = "baaad1bf9e2acb3ab721945041ef46496951c04c"
+SRCREV = "bde9b04ff2ce49d343e36c86d6ae99ff53cbf11a"
 
 PE = "1"
 
