@@ -22,3 +22,4 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-meta-base \
     v4l-utils \
     "
+EXTRA_IMAGE_FEATURES = "debug-tweaks tools-debug"
