@@ -21,5 +21,7 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-libav \
     gstreamer1.0-meta-base \
     v4l-utils \
+    networkmanager-nmcli \
+    networkmanager-wifi \
     "
 EXTRA_IMAGE_FEATURES = "debug-tweaks tools-debug"
