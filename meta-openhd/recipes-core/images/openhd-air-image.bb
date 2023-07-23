@@ -20,4 +20,5 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-libav \
     gstreamer1.0-meta-base \
+    v4l-utils \
     "
