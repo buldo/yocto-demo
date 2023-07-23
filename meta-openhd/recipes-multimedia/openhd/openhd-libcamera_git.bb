@@ -15,7 +15,6 @@ SRC_URI = " \
 SRCREV = "fb44403f1c5571549ac128c21daee9761eb9249c"
 
 PE = "1"
-PN = "libcamera"
 S = "${WORKDIR}/git"
 
 DEPENDS = "python3-pyyaml-native python3-jinja2-native python3-ply-native python3-jinja2-native udev gnutls chrpath-native libevent libyaml"
