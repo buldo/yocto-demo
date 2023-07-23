@@ -4,7 +4,7 @@ SECTION = "libs"
 LICENSE="CLOSED"
 
 SRC_URI = " \
-        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=master \
+        git://github.com/raspberrypi/libcamera.git;protocol=https;branch=main \
 "
 
 SRCREV = "bde9b04ff2ce49d343e36c86d6ae99ff53cbf11a"
