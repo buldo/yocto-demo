@@ -14,7 +14,7 @@ SRC_URI = "\
     gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.4-evo \
     file://openhd.service \
 "
-SRCREV = "2faa84df90dd805cb115a9cb657784a3ba5c24ed"
+SRCREV = "af1e67c7cc605447ad35f75daffb676b8122b835"
 
 S = "${WORKDIR}/git/OpenHD"
 
