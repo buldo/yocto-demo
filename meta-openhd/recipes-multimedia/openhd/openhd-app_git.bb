@@ -44,6 +44,7 @@ RDEPENDS:${PN} += "\
     libv4l \
     boost \
     libsodium \
+    networkmanager \
 "
 
 EXTRA_OECMAKE = "\
