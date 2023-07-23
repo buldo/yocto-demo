@@ -58,7 +58,7 @@ do_recalculate_ipa_signatures_package() {
     for module in $(find ${PKGD}/usr/lib/libcamera -name "*.so.sign"); do
         module="${module%.sign}"
         if [ -f "${module}" ] ; then
-            modules="${modules} ${PKGD}/usr/${module}"
+            modules="${modules} ${module}"
         fi
     done
 
