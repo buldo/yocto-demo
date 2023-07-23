@@ -20,6 +20,7 @@ RDEPENDS:${PN} = "\
     openhd-app \
     openhd-air-marker \
     userland \
+    libcamera \
     gstreamer1.0 \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-base \
