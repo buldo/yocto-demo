@@ -25,7 +25,7 @@ DEPENDS = "\
     libsodium \
     libv4l \
     libpcap \
-    openhd-libcamera \ 
+    libcamera \ 
     gstreamer1.0 \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-base \
@@ -39,7 +39,7 @@ RDEPENDS:${PN} += "\
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-ugly \
-    openhd-libcamera \
+    libcamera \
     libpcap \
     libv4l \
     boost \

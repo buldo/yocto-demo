@@ -13,7 +13,7 @@ IMAGE_INSTALL:append = " \
     rtl8812au \
     systemd \
     userland \
-    openhd-libcamera \
+    libcamera \
     gstreamer1.0 \
     gstreamer1.0-plugins-good \ 
     gstreamer1.0-plugins-base \ 
@@ -21,5 +21,3 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-libav \
     gstreamer1.0-meta-base \
     "
-
-EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
