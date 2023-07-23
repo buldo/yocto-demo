@@ -47,7 +47,7 @@ RDEPENDS:${PN} += "\
 "
 
 EXTRA_OECMAKE = "\
-    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_BUILD_TYPE=Debug \
     -DBoost_INCLUDE_DIR=${STAGING_INCDIR} \
     -DCMAKE_LIBRARY_PATH=${STAGING_LIBDIR} \
     -DFETCHCONTENT_FULLY_DISCONNECTED=OFF \
@@ -55,6 +55,7 @@ EXTRA_OECMAKE = "\
 
 FILES:${PN} += "${systemd_unitdir}/system/openhd.service"
 
+EXTRA_OECMAKE:append:raspberrypi0-2w = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 EXTRA_OECMAKE:append:raspberrypi3 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 EXTRA_OECMAKE:append:raspberrypi4 = " -DENABLE_COMPILE_FLAGS_FOR_TARGET=armv8-neon"
 
