@@ -5,7 +5,6 @@ LICENSE="CLOSED"
 
 SRC_URI = " \
         git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
-#        file://0001-file_sink.cpp-Avoid-dangling-reference.patch \
 "
 
 SRCREV = "baaad1bf9e2acb3ab721945041ef46496951c04c"
