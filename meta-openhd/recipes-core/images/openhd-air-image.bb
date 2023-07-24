@@ -23,4 +23,8 @@ IMAGE_INSTALL:append = " \
     v4l-utils \
     valgrind \
     "
-EXTRA_IMAGE_FEATURES = "debug-tweaks tools-debug"
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+INHIBIT_PACKAGE_STRIP = "1"
+DEBUG_BUILD = "1"
+
+EXTRA_IMAGE_FEATURES = " debug-tweaks tools-debug dbg-pkgs"
