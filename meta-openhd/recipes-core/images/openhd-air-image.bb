@@ -23,7 +23,6 @@ IMAGE_INSTALL:append = " \
     v4l-utils \
     valgrind \
     rpi-libcamera-apps \
-    openhd-hardware-config \
     "
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 INHIBIT_PACKAGE_STRIP = "1"

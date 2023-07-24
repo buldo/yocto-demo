@@ -29,4 +29,5 @@ RDEPENDS:${PN} = "\
     gstreamer1.0-plugins-ugly \
     v4l-utils \
     networkmanager \
+    openhd-hardware-config \
 "

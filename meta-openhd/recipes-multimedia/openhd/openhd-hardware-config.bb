@@ -7,14 +7,14 @@ SECTION = "console/utils"
 LICENSE="CLOSED"
 
 SRC_URI = "\
-    file://air.txt;unpack=0 \
+    file://hardware.config;unpack=0 \
 "
 
-FILES:${PN} += "/boot/openhd/air.txt"
+FILES:${PN} += "/boot/openhd/hardware.config"
 
 do_install() {
     install -m 0755 -d ${D}/boot/openhd
-    install -m 0755 ${WORKDIR}/air.txt ${D}/boot/openhd/air.txt
+    install -m 0755 ${WORKDIR}/hardware.config ${D}/boot/openhd/hardware.config
 }
 
 addtask deploy after do_install
