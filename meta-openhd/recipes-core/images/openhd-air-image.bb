@@ -22,7 +22,7 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-meta-base \
     v4l-utils \
     valgrind \
-    libcamera-apps \
+    rpi-libcamera-apps \
     openhd-hardware-config \
     "
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
