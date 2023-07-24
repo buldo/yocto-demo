@@ -22,6 +22,7 @@ IMAGE_INSTALL:append = " \
     gstreamer1.0-meta-base \
     v4l-utils \
     valgrind \
+    libcamera-apps \
     "
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 INHIBIT_PACKAGE_STRIP = "1"
