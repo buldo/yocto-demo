@@ -40,29 +40,31 @@ RDEPENDS:${PN} = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland qt', 'qtwayla
 
 inherit meson pkgconfig python3native
 
-do_configure:prepend() {
-    sed -i -e 's|py_compile=True,||' ${S}/utils/ipc/mojo/public/tools/mojom/mojom/generate/template_expander.py
-}
+#do_configure:prepend() {
+#    sed -i -e 's|py_compile=True,||' ${S}/utils/ipc/mojo/public/tools/mojom/mojom/generate/template_expander.py
+#}
 
 do_install:append() {
     chrpath -d ${D}${libdir}/libcamera.so
     chrpath -d ${D}${libdir}/v4l2-compat.so
 }
 
-addtask do_recalculate_ipa_signatures_package after do_package before do_packagedata
-do_recalculate_ipa_signatures_package() {
-    local modules
-    for module in $(find ${PKGD}/usr/lib/libcamera -name "*.so.sign"); do
-        module="${module%.sign}"
-        if [ -f "${module}" ] ; then
-            modules="${modules} ${module}"
-        fi
-    done
-
-    ${S}/src/ipa/ipa-sign-install.sh ${B}/src/ipa-priv-key.pem "${modules}"
-}
+#addtask do_recalculate_ipa_signatures_package after do_package before do_packagedata
+#do_recalculate_ipa_signatures_package() {
+#    local modules
+#    for module in $(find ${PKGD}/usr/lib/libcamera -name "*.so.sign"); do
+#        module="${module%.sign}"
+#        if [ -f "${module}" ] ; then
+#            modules="${modules} ${module}"
+#        fi
+#    done
+#
+#    ${S}/src/ipa/ipa-sign-install.sh ${B}/src/ipa-priv-key.pem "${modules}"
+#}
 
 FILES:${PN} += " ${libdir}/v4l2-compat.so"
+FILES:${PN} += " /usr/share/libcamera"
+FILES:${PN} += " /usr/lib/libcamera"
 FILES:${PN}-gst = "${libdir}/gstreamer-1.0"
 
 # libcamera-v4l2 explicitly sets _FILE_OFFSET_BITS=32 to get access to
