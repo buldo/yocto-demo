@@ -1,6 +1,6 @@
 downloads/
-cache/
-tmp/
-sstate-cache/
+cache**/
+tmp**/
+sstate-cache**/
 bitbake-cookerdaemon.log
 /.vs
