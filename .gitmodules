@@ -1,15 +1,15 @@
 [submodule "poky"]
 	path = poky
 	url = git://git.yoctoproject.org/poky.git
-	branch = langdale
+	branch = mickledore
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/meta-raspberrypi/
-	branch = langdale
+	branch = mickledore
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
-	branch = langdale
+	branch = mickledore
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
