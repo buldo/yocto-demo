@@ -10,4 +10,5 @@ COMPATIBLE_MACHINE = "^rpi$"
 
 RDEPENDS:${PN} = "\
     openhd-hardware-config \
+    qopenhd-app \
 "
