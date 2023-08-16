@@ -1,0 +1,54 @@
+From aa115be54e1d1040da747face4cbafc19ff6d854 Mon Sep 17 00:00:00 2001
+From: Roman Buldygin <froooks@gmail.com>
+Date: Thu, 17 Aug 2023 02:08:03 +0300
+Subject: [PATCH] constants
+
+---
+ .../avcodec/gl/gl_videorenderer.cpp           |  2 +-
+ .../avcodec/gl/gl_videorenderer.h             | 20 +++++++++++++++++++
+ 2 files changed, 21 insertions(+), 1 deletion(-)
+
+diff --git a/app/videostreaming/avcodec/gl/gl_videorenderer.cpp b/app/videostreaming/avcodec/gl/gl_videorenderer.cpp
+index 87d89737..8758e3e4 100644
+--- a/app/videostreaming/avcodec/gl/gl_videorenderer.cpp
++++ b/app/videostreaming/avcodec/gl/gl_videorenderer.cpp
+@@ -211,7 +211,7 @@ bool GL_VideoRenderer::update_texture_egl_external(AVFrame* frame) {
+ 	}
+   }
+   *a = EGL_NONE;
+-  const EGLImage image = eglCreateImageKHR(egl_display,
++  const EGLImageKHR image = eglCreateImageKHR(egl_display,
+ 										   EGL_NO_CONTEXT,
+ 										   EGL_LINUX_DMA_BUF_EXT,
+ 										   NULL, attribs);
+diff --git a/app/videostreaming/avcodec/gl/gl_videorenderer.h b/app/videostreaming/avcodec/gl/gl_videorenderer.h
+index 7fb0d7e5..441cf938 100644
+--- a/app/videostreaming/avcodec/gl/gl_videorenderer.h
++++ b/app/videostreaming/avcodec/gl/gl_videorenderer.h
+@@ -10,6 +10,26 @@
+ #include "avcodec_helper.hpp"
+ #include "gl_shaders.h"
+ 
++#define EGL_LINUX_DMA_BUF_EXT             0x3270
++#define EGL_LINUX_DRM_FOURCC_EXT          0x3271
++
++#define EGL_DMA_BUF_PLANE0_FD_EXT         0x3272
++#define EGL_DMA_BUF_PLANE0_OFFSET_EXT     0x3273
++#define EGL_DMA_BUF_PLANE0_PITCH_EXT      0x3274
++#define EGL_DMA_BUF_PLANE1_FD_EXT         0x3275
++#define EGL_DMA_BUF_PLANE1_OFFSET_EXT     0x3276
++#define EGL_DMA_BUF_PLANE1_PITCH_EXT      0x3277
++#define EGL_DMA_BUF_PLANE2_FD_EXT         0x3278
++#define EGL_DMA_BUF_PLANE2_OFFSET_EXT     0x3279
++#define EGL_DMA_BUF_PLANE2_PITCH_EXT      0x327A
++
++#define EGL_DMA_BUF_PLANE0_MODIFIER_LO_EXT 0x3443
++#define EGL_DMA_BUF_PLANE0_MODIFIER_HI_EXT 0x3444
++#define EGL_DMA_BUF_PLANE1_MODIFIER_LO_EXT 0x3445
++#define EGL_DMA_BUF_PLANE1_MODIFIER_HI_EXT 0x3446
++#define EGL_DMA_BUF_PLANE2_MODIFIER_LO_EXT 0x3447
++#define EGL_DMA_BUF_PLANE2_MODIFIER_HI_EXT 0x3448
++
+ struct EGLFrameTexture{
+   // I think we need to keep the av frame reference around as long as we use the generated egl texture in opengl.
+   AVFrame* av_frame= nullptr;

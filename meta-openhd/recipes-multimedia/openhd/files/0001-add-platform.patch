@@ -1,0 +1,22 @@
+From f33461912a8013dfc4743591f3c213720b2e9e74 Mon Sep 17 00:00:00 2001
+From: Roman Buldygin <froooks@gmail.com>
+Date: Thu, 17 Aug 2023 01:49:35 +0300
+Subject: [PATCH] add platform
+
+---
+ platforms.pri | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/platforms.pri b/platforms.pri
+index 480c9b74..aadf070b 100644
+--- a/platforms.pri
++++ b/platforms.pri
+@@ -1,7 +1,7 @@
+ 
+ 
+ linux {
+-    linux-g++ | linux-g++-64 | linux-g++-32 | linux-clang | linux-jetson-nano-g++| linux-RK3566-g++ | linux-rpi4-v3d-g++ | linux-rpi-g++ | linux-rpi-vc4-g++ | linux-rasp-pi-g++ {
++    linux-g++ | linux-g++-64 | linux-g++-32 | linux-clang | linux-jetson-nano-g++| linux-RK3566-g++ | linux-rpi4-v3d-g++ | linux-rpi-g++ | linux-rpi-vc4-g++ | linux-rasp-pi-g++ | linux-oe-g++ {
+         message("LinuxBuild")
+         CONFIG += LinuxBuild
+         DEFINES += __desktoplinux__

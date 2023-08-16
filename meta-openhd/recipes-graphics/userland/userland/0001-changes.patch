@@ -1,0 +1,77 @@
+From 79360e67def8658d28e28e6a3b791a2ebdc39d11 Mon Sep 17 00:00:00 2001
+From: Roman Buldygin <froooks@gmail.com>
+Date: Thu, 17 Aug 2023 02:26:24 +0300
+Subject: [PATCH] changes
+
+---
+ host_applications/linux/apps/vcmailbox/vcmailbox.c | 0
+ host_applications/linux/libs/debug_sym/debug_sym.c | 0
+ interface/khronos/include/EGL/eglext.h             | 0
+ interface/mmal/util/mmal_graph.h                   | 2 +-
+ interface/vchiq_arm/vchiq_if.h                     | 0
+ interface/vchiq_arm/vchiq_ioctl.h                  | 0
+ interface/vchiq_arm/vchiq_lib.c                    | 0
+ interface/vmcs_host/khronos/IL/OMX_Video.h         | 0
+ interface/vmcs_host/vc_dispmanx.h                  | 0
+ interface/vmcs_host/vc_vchi_dispmanx.c             | 0
+ interface/vmcs_host/vc_vchi_gpuserv.c              | 0
+ interface/vmcs_host/vc_vchi_gpuserv.h              | 0
+ 12 files changed, 1 insertion(+), 1 deletion(-)
+ mode change 100755 => 100644 host_applications/linux/apps/vcmailbox/vcmailbox.c
+ mode change 100755 => 100644 host_applications/linux/libs/debug_sym/debug_sym.c
+ mode change 100755 => 100644 interface/khronos/include/EGL/eglext.h
+ mode change 100755 => 100644 interface/vchiq_arm/vchiq_if.h
+ mode change 100755 => 100644 interface/vchiq_arm/vchiq_ioctl.h
+ mode change 100755 => 100644 interface/vchiq_arm/vchiq_lib.c
+ mode change 100755 => 100644 interface/vmcs_host/khronos/IL/OMX_Video.h
+ mode change 100755 => 100644 interface/vmcs_host/vc_dispmanx.h
+ mode change 100755 => 100644 interface/vmcs_host/vc_vchi_dispmanx.c
+ mode change 100755 => 100644 interface/vmcs_host/vc_vchi_gpuserv.c
+ mode change 100755 => 100644 interface/vmcs_host/vc_vchi_gpuserv.h
+
+diff --git a/host_applications/linux/apps/vcmailbox/vcmailbox.c b/host_applications/linux/apps/vcmailbox/vcmailbox.c
+old mode 100755
+new mode 100644
+diff --git a/host_applications/linux/libs/debug_sym/debug_sym.c b/host_applications/linux/libs/debug_sym/debug_sym.c
+old mode 100755
+new mode 100644
+diff --git a/interface/khronos/include/EGL/eglext.h b/interface/khronos/include/EGL/eglext.h
+old mode 100755
+new mode 100644
+diff --git a/interface/mmal/util/mmal_graph.h b/interface/mmal/util/mmal_graph.h
+index e6284ba..eb65aef 100644
+--- a/interface/mmal/util/mmal_graph.h
++++ b/interface/mmal/util/mmal_graph.h
+@@ -28,7 +28,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #ifndef MMAL_GRAPH_H
+ #define MMAL_GRAPH_H
+ 
+-#include "util/mmal_connection.h"
++#include "interface/mmal/util/mmal_connection.h"
+ 
+ /** \defgroup MmalGraphUtility Graph Utility
+  * \ingroup MmalUtilities
+diff --git a/interface/vchiq_arm/vchiq_if.h b/interface/vchiq_arm/vchiq_if.h
+old mode 100755
+new mode 100644
+diff --git a/interface/vchiq_arm/vchiq_ioctl.h b/interface/vchiq_arm/vchiq_ioctl.h
+old mode 100755
+new mode 100644
+diff --git a/interface/vchiq_arm/vchiq_lib.c b/interface/vchiq_arm/vchiq_lib.c
+old mode 100755
+new mode 100644
+diff --git a/interface/vmcs_host/khronos/IL/OMX_Video.h b/interface/vmcs_host/khronos/IL/OMX_Video.h
+old mode 100755
+new mode 100644
+diff --git a/interface/vmcs_host/vc_dispmanx.h b/interface/vmcs_host/vc_dispmanx.h
+old mode 100755
+new mode 100644
+diff --git a/interface/vmcs_host/vc_vchi_dispmanx.c b/interface/vmcs_host/vc_vchi_dispmanx.c
+old mode 100755
+new mode 100644
+diff --git a/interface/vmcs_host/vc_vchi_gpuserv.c b/interface/vmcs_host/vc_vchi_gpuserv.c
+old mode 100755
+new mode 100644
+diff --git a/interface/vmcs_host/vc_vchi_gpuserv.h b/interface/vmcs_host/vc_vchi_gpuserv.h
+old mode 100755
+new mode 100644

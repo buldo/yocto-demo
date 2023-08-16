@@ -1,0 +1,21 @@
+From 7c43c3c03d1dcd9df1221a32f0add873ca053deb Mon Sep 17 00:00:00 2001
+From: Roman Buldygin <froooks@gmail.com>
+Date: Thu, 17 Aug 2023 02:26:00 +0300
+Subject: [PATCH] array
+
+---
+ app/common/StringHelper.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/app/common/StringHelper.hpp b/app/common/StringHelper.hpp
+index d3b48f8d..65e9f772 100644
+--- a/app/common/StringHelper.hpp
++++ b/app/common/StringHelper.hpp
+@@ -11,6 +11,7 @@
+ #include <cmath>
+ #include <iomanip>
+ #include <cassert>
++#include <array>
+ 
+ class StringHelper{
+ public:
