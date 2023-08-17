@@ -5,7 +5,7 @@ SECTION = "console/utils"
 
 # TODO: Change license
 LICENSE="CLOSED"
-inherit autotools pkgconfig qmake5
+inherit pkgconfig qmake5
 
 SRC_URI = "gitsm://github.com/OpenHD/QOpenHD.git;protocol=https;branch=2.5-evo \
            file://0001-add-platform.patch \
@@ -16,14 +16,8 @@ SRCREV = "168c86495a8017397869d22db9980103ec81d2dc"
 S = "${WORKDIR}/git"
 
 DEPENDS = "\
-    virtual/egl \
-    virtual/libomxil \
-    virtual/libgbm \
     coreutils-native \
-    libsdl \
-    libsdl2 \
     userland \
-    mesa-gl \
     jsoncpp \
     libtinyxml2 \
     openhd-mavsdk \
@@ -44,12 +38,6 @@ DEPENDS = "\
 
 RDEPENDS:${PN} += "\
     userland \
-    mesa-gl \
-    libegl \
-    libgles2 \
-    egl \
-    libegl1 \
-    libglesv2-2 \
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
@@ -61,3 +49,10 @@ RDEPENDS:${PN} += "\
 "
 
 COMPATIBLE_MACHINE = "^rpi$"
+
+do_install:append() {
+#    install -d ${D}${systemd_system_unitdir}
+#    install -m 0644 ${WORKDIR}/openhd.service ${D}${systemd_system_unitdir}
+    install -d ${D}${bindir}
+    install -m 0755 ${B}/release/QOpenHD ${D}${bindir}
+}

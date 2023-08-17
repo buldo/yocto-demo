@@ -4,10 +4,5 @@ inherit systemd
 COMPATIBLE_MACHINE = "^rpi$"
 
 IMAGE_INSTALL:append = " \
-    ffmpeg \
-    packagegroup-openhd-ground \
-    rtl8812au \
-    systemd \
+    qopenhd-app \
     "
-
-IMAGE_FEATURES:append = " hwcodecs"

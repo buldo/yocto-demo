@@ -10,5 +10,13 @@ COMPATIBLE_MACHINE = "^rpi$"
 
 RDEPENDS:${PN} = "\
     openhd-hardware-config \
+    openhd-ground-marker \
     qopenhd-app \
 "
+
+#RDEPENDS:${PN} = "\
+#    openhd-hardware-config \
+#    openhd-ground-marker \
+#    openhd-app \
+#    qopenhd-app \
+#"
