@@ -12,7 +12,12 @@ sudo locale-gen en_US.UTF-8
 git clone --recurse-submodules https://github.com/buldo/yocto-demo.git
 cd yocto-demo
 source poky/oe-init-build-env .
+
+# Build rpi zero 2W air image
 bitbake mc:rpiz2w:openhd-air-image
+
+# Build rpi4 air image
+bitbake mc:rpiz2w:openhd-ground-image
 ```
 
 Maybe build will be failed. Try run this first

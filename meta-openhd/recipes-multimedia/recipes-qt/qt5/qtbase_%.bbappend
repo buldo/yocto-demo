@@ -1,4 +1,6 @@
-do_configure:prepend:raspberrypi4() {
+do_configure:prepend() {
+    echo "CONFIGURE QT_TBASE"
+
     cat > ${S}/mkspecs/oe-device-extra.pri <<EOF
     QMAKE_LIBS_EGL         += -lEGL
     QMAKE_LIBS_OPENGL_ES2  += -lGLESv2 -lEGL
@@ -9,3 +11,5 @@ do_configure:prepend:raspberrypi4() {
     EGLFS_DEVICE_INTEGRATION = eglfs_kms
     EOF
 }
+
+PACKAGECONFIG += "gles2"

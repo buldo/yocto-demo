@@ -5,4 +5,5 @@ COMPATIBLE_MACHINE = "^rpi$"
 
 IMAGE_INSTALL:append = " \
     qopenhd-app \
+    kernel-modules \
     "
