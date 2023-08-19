@@ -11,7 +11,7 @@ SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE:${PN} = "openhd.service"
 
 SRC_URI = "\
-    gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.4-evo \
+    gitsm://github.com/OpenHD/OpenHD.git;protocol=https;branch=2.5-evo \
     file://openhd.service \
 "
 SRCREV = "af1e67c7cc605447ad35f75daffb676b8122b835"

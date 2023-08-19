@@ -1,0 +1,16 @@
+[Unit]
+Description=QOpenHD
+After=multi-user.target
+
+[Service]
+User=root
+Environment="QT_QPA_EGLFS_KMS_ATOMIC=1"
+Environment="QT_QPA_EGLFS_KMS_CONFIG=/usr/local/share/qopenhd/rpi_qt_eglfs_kms_config.json"
+Environment="QT_QPA_PLATFORM=eglfs"
+ExecStart=/usr/bin/QOpenHD
+Restart=always
+RestartSec=3
+
+
+[Install]
+WantedBy=multi-user.target

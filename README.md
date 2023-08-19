@@ -17,7 +17,7 @@ source poky/oe-init-build-env .
 bitbake mc:rpiz2w:openhd-air-image
 
 # Build rpi4 air image
-bitbake mc:rpiz2w:openhd-ground-image
+bitbake mc:rpi4:openhd-ground-image
 ```
 
 Maybe build will be failed. Try run this first
