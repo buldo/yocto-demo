@@ -16,7 +16,7 @@ source poky/oe-init-build-env .
 # Build rpi zero 2W air image
 bitbake mc:rpiz2w:openhd-air-image
 
-# Build rpi4 air image
+# Build rpi4 ground image
 bitbake mc:rpi4:openhd-ground-image
 ```
 
