@@ -8,10 +8,7 @@ inherit packagegroup
 
 COMPATIBLE_MACHINE = "^rpi$"
 
-OMXPLAYER  = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '', 'omxplayer', d)}"
-
 RDEPENDS:${PN} = "\
-    ${OMXPLAYER} \
     raspi-gpio \
     rpio \
     rpi-gpio \
@@ -20,14 +17,12 @@ RDEPENDS:${PN} = "\
     openhd-app \
     openhd-air-marker \
     userland \
-    openhd-libcamera \
-    openhd-libcamera-gst \
+    libcamera \
     gstreamer1.0 \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-ugly \
-    v4l-utils \
     networkmanager \
     openhd-hardware-config \
 "
